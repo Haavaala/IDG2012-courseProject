@@ -1,19 +1,37 @@
+/* variables for the colors */
+:root{
+    --navbar: #1b365d;
+    --back: #f5f5f5;
+    --hover: #2c5288;
+}
+
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #f5f5f5;
+    background-color: var(--back);
     font-family: 'Roboto', sans-serif;
 }
 
-/* //navbar styling */
+.skip-to-content {
+    position: absolute;
+    top: -400px;
+    } 
+    
+    .skip-to-content:focus {
+    position: relative;
+    top: 0;
+    }
+
+/*navbar styling*/
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     color: #fff;
     height: 2.7rem;
     min-width: 100%;
@@ -42,7 +60,7 @@ body{
 
 nav a:hover{
     color: white;
-    background-color: #4d4d4d;
+    background-color: var(--hover);
     border-radius: 5%;
 }
 
@@ -52,7 +70,7 @@ nav a:hover{
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
     z-index: 1;
@@ -71,7 +89,7 @@ nav a:hover{
 }
 
 .dropbtn{
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     color: #fff;
     font-size: 1.2rem;
     margin: 0 auto;
@@ -80,21 +98,54 @@ nav a:hover{
     display: none;
 }
 
-.frontimage{
-    display: block;
-    max-width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
 
-video{
+/* code for the video file */
+.video, .frontimage{
     display: block;
     margin: 0 auto;
     margin-top: 2%;
     width: 80%;
     min-height: 40px;
     border-radius: 25px;     
+}
 
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.playpause, .stop, .fwd, .rwd{
+    border-radius: 2px;
+    background-color: var(--navbar);
+    color: white;
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    margin-top: 1%;
+    cursor: pointer;
+}
+
+.playpause:hover, .stop:hover, .fwd:hover, .rwd:hover{
+    background-color: var(--hover);
+}
+
+.time{
+    font-size: 1.8rem;
+    display: block;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.summaryVideo{
+    margin: 0 auto;
+    max-width: 70ch;
+    font-size: 1.2rem;
+    margin-top: 2%;
+    text-align: center;
 }
 
 h1{
@@ -104,6 +155,7 @@ h1{
     text-transform: uppercase;
 }
 
+/*code for the form*/
 form{
     display: flex;
     justify-content: center;
@@ -126,13 +178,17 @@ form button{
     height: 2rem;
     border-radius: 5px;
     border: 1px solid #0f0748;
-    background-color: #afa8e3;
-    color: rgb(0, 0, 0);
+    background-color: var(--navbar);
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     margin-top: 2%;
 }
 
+form button:hover{
+    background-color: var(--hover);
+}
+/* code for the images page */
 .images-container{
     width: 100%;
     display: flex;
@@ -161,6 +217,7 @@ img{
     background-color: white;
 }
 
+/* code for the attractions page */
 .popupIdyll{
     display: none;
     border-radius: 25px;
@@ -235,7 +292,7 @@ img{
     width: 50px;
     top: 0;
     right: 0;
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     color: #fff;
     font-size: 1.2rem;
     border-radius: 20%;
@@ -246,7 +303,7 @@ img{
 
 .close-popup:hover{
     color: white;
-    background-color: #4d4d4d;
+    background-color: var(--hover);
     
 }
 
@@ -265,10 +322,15 @@ img{
     height: 50px;
     cursor: pointer;
     color: white;
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     
 }
 
+.Idyll:hover{
+    background-color: var(--hover);
+}
+
+/* code for the facts page */
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -295,6 +357,7 @@ padding: 8px;
     
 }
 
+/* code for the music page */
 .music--container{
     width: 100%;
     display: flex;
@@ -309,8 +372,8 @@ padding: 8px;
     align-items: center;
     flex-direction: column;
     margin-top: 2%;
-    height: 70%;
-    width: auto;
+    height: 400px;
+    max-width: 350px;
     
 }
 
@@ -329,7 +392,7 @@ padding: 8px;
 
 .music > h2{
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
 }
 
@@ -343,13 +406,13 @@ audio{
 }
 
 .tpButton, .CCbutton, .pizza, .wigButton{
-    background-color: black;
+    background-color: var(--navbar);
     color: white;
     border-radius: 25px;
-    width: 50%;
+    width: 150px;
     margin: 0 auto;
     margin-top: 2%;
-    height: 10%;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -359,6 +422,7 @@ audio{
 
 .typiskNorsk > p, .kanskje > p, .stektPizza > p, .dreams > p{
     margin-top: 1%;
+    max-width: 350px;
 }
 
 .typiskNorsk.active, .kanskje.active, .stektPizza.active, .dreams.active, .dreams.active{
@@ -367,7 +431,7 @@ audio{
 
 
 
-
+/* media query for screens with max width of 1000 pixels */
 @media (max-width: 1000px) {
     
     .dropdown-content{
@@ -377,6 +441,7 @@ audio{
         align-items: center;
         position: absolute;
         width: 100%;
+
         text-transform: uppercase;
     }
 
@@ -412,13 +477,33 @@ audio{
     
 }
 
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.playpause, .stop, .fwd, .rwd{
+    border-radius: 2px;
+    background-color: var(--navbar);
+    color: white;
+    padding: 10px;
+    height: 50px;
+    width: 100px;
+    margin-top: 2%;
+    cursor: pointer;
+}
 
 .dropdown-content.active{
     display: block;
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    min-height: 100%;
 }  
+
 
 
 .popupIdyll{
@@ -475,11 +560,11 @@ audio{
 }
 
 .close-popup{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     top: 0;
     right: 0;
-    background-color: #2c2c2c;
+    background-color: var(--navbar);
     color: #fff;
     font-size: 1.2rem;
     border-radius: 20%;
@@ -504,8 +589,39 @@ audio{
     
 }
 
+.ccCow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.ccCow, .katastrofe, .staysman, .wigwam{
+    margin-top: 2%;
+    height: 300px;
+    max-width: 250px;
+    
+}
+
+.tpButton, .CCbutton, .pizza, .wigButton{
+    background-color: var(--navbar);
+    color: white;
+    border-radius: 25px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 2%;
+    height: 40px;
+    cursor: pointer;
+}
+
+p{
+    padding: 10px;
+}
+
+
+}
+
+
+/* code for media query with a maximum width of 450 pixels */
 @media (max-width: 450px){
     .popupIdyll{
         border-radius: 25px;
@@ -514,5 +630,42 @@ audio{
         background-color: white;
         z-index: 1;
         margin: 0 auto; 
+    }
+
+    .ccCow, .katastrofe, .staysman, .wigwam{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2%;
+        height: 130px;
+        max-width: 150px;
+        
+    }
+    
+    .tpButton, .CCbutton, .pizza, .wigButton{
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        width: 50px;
+        margin: 0 auto;
+        margin-top: 2%;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .music > h2{
+        text-align: center;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+    .image > h2{
+        font-size: 0.8rem;
+        max-width: 80%;
+    }
+
+    h1{
+        font-size: 1rem;
     }
 }

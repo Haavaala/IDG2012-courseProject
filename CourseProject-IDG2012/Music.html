@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
+    <a class="skip-to-content" href="#content">Skip to main
+        content</a>
+    
         <nav class="navbar">
             <div class="dropdown">
-                <button class="dropbtn">Dropdown
+                <button class="dropbtn">Menu
                 </button>
                 <div class="dropdown-content">
                     <ul>
@@ -39,129 +41,30 @@
             </ul>
         </div>
         </nav>
-        </header>
+        
+        <main id="content">
         <h1>Music from Fredrikstad</h1>
 
+        <!-- container for the audio file, image of the artist and controls  -->
         <div class="music--container">
-
         <div class="music">
-            <h2>Kanskje du behøver noen</h2>
-            <img class="ccCow" src="./images/cccowboys.png" alt="Image of the band CC cowboys">
-        <audio controls>
-            <source src="./Music/CCcowboys.mp3" type="audio/mp3">
-        </audio>
-<button class="CCbutton">View Lyrics</button>
-<div class="kanskje">
-    <p>Jeg husker det så godt, du ba meg inn
-        Jeg satt sjenert og nippet til din vin
-        Du sa du likte kunst og vakre menn
-        Jeg drømte om å være en av dem
-        Jeg husker det så godt, jeg ville bli
-        At du ville gi, meg litt av din tid
-        Jeg håpet at du ville si</p>
-        <p>Kanskje du
-            Behøver noen som trenger deg
-            Behøver noen som hører deg
-            Kanskje du
-            Behøver noen som trenger deg
-            Kanskje du behøver...
-            Kanskje jeg behøver noen...
-            ...som trenger deg</p>
-            <p>Jeg husker det så godt du ba meg bli
-                Det var så mye mer du ville si
-                Du drømte om en krig som alle vant
-                Fred som kom og aldri mer forsvant
-                Du var så uoppnålig for meg da
-                Jeg ville ikke dra, bort der ifra
-                Jeg håpet at du ville si</p>
-                <p>Kanskje du
-                    Behøver noen som trenger deg
-                    Behøver noen som hører deg
-                    Kanskje du
-                    Behøver noen som trenger deg
-                    Kanskje du behøver...
-                    Kanskje jeg behøver noen...
-                    ...som trenger deg</p>
-                    <p>Jeg håpet at du ville si
-                        Kanskje du
-                        Behøver noen som trenger deg
-                        Behøver noen som hører deg
-                        Kanskje du
-                        Behøver noen som trenger deg
-                        Kanskje du behøver...
-                        Kanskje jeg behøver...
-                        Kanskje vi behøver noen...
-                        ...som trenger oss</p>
-</div>
-        </div>
-
-        <div class="music">
-        <h2>Typisk Norsk</h2>
-        <img class="katastrofe" src="./images/katastrofe.png" alt="Image of the musician Katastrofe">
-        <audio controls>
-            <source src="./Music/katastrofe.mp3" type="audio/mp3">
-        </audio>
-        <button class="tpButton">View Lyrics</button>
-        <div class="typiskNorsk">
-            <p>Vi nyter sommeren selvom regnet høljer ned,
-                12 Måneder vinter
-                Vikke vært noe annet sted
-                Har alt vi trenger
-                Ja vi blir her til vi dør
-                Fra øst til vest og nord til sør</p>
-                <p>Hele Norge synger
-                    Å å å
-                    Det er typisk norsk å være god
-                    Så typisk norsk å være god
-                    Det er typisk norsk å være god
-                    God god god god
-                    Det er typisk norsk å være god</p>
-                    <p>Det er typisk norsk å være god
-                        Nei gått av banen hvor det går
-                        Jodeleio
-                        Jeg tro vi jammen tar en skål
-                        Jodeleio
-                        For det er ingenting som slår
-                        Jodeleio
-                        Jenter i bunad om vår'n
-                        Det er bedre enn Selena Gom Selena Gom
-                        For ekte menn vi vil ha fenalår fenalår
-                        Å å å</p>
-                        <p>Vi nyter sommeren selvom regnet høljer ned
-                            12 Måneder vinter
-                            Vikke vært noe annet sted
-                            Har alt vi trenger
-                            Ja vi blir her til vi dør
-                            Fra øst til vest og nord til sør
-                            Hele norge synger
-                            Å å å
-                            Det er typisk norsk å være god
-                            Så typisk norsk å være god</p>
-                            <p>Det er typisk norsk å være god
-                                God god god god
-                                Det er typisk norsk å være god
-                                Å å å
-                                Det er typisk norsk å være god
-                                Så typisk norsk å være god
-                                Det er typisk norsk å være god
-                                God god god god
-                                Å å å
-                                Det er typisk norsk å være god
-                                Så typisk norsk å være god
-                                Det er typisk norsk å være god
-                                God god god god</p>
-        </div>
-        </div>
-
-
-
-        <div class="music">
-        <h2>En godt stekt pizza</h2>
-        <img class="staysman" src="./images/staysman.png" alt="Image of the musician Staysman">
-        <audio controls>
-            <source src="./Music/staysman.mp3" type="audio/mp3">
-        </audio>
-        <button class="pizza">View Lyrics</button>
+        <h2 tabindex="0">En godt stekt pizza</h2>
+        <img tabindex="0" class="staysman" src="./images/staysman.png" alt="Image of the musician Staysman">
+        
+        <section class="player">
+            <audio class="audio" id="stekt">
+                <source src="./Music/staysman.mp3" type="audio/mp3">
+            </audio>
+            <div class="controls">
+                <button class="playpause">Play</button>
+                <button class="stop">Stop</button>
+                <button class="rwd">Backward</button>
+                <button class="fwd">Forward</button>
+                <div class="time">00:00</div>
+            </div>
+            </section>
+            <!-- button that displays the lyrics of the song -->
+        <button tabindex="0" class="pizza">View Lyrics</button>
         <div class="stektPizza">
             <p>Han heter roger
                 Når det er snakk om fest
@@ -230,68 +133,10 @@
                                     Hahahaha</p>
         </div>
         </div>
-
-        <div class="music">
-        <h2>In my dreams</h2>
-        <img class="wigwam" src="./images/wigwam.png" alt="Image of the rock-band Wig-Wam">
-        <audio controls>
-            <source src="./Music/WigWam.mp3" type="audio/mp3">
-        </audio>
-        <button class="wigButton">View Lyrics</button>
-        <div class="dreams">
-            <p>Come on, come on, come on
-                Love is all over me
-                Over me
-                I don't know if this is what it seems
-                Is it real or just a fantasy
-                Aim to please is all you ever do
-                Making all my fairytales come true</p>
-                <p>Come on, come on, come on
-                    Love is all over me
-                    You are the only one
-                    Living in my fantasy
-                    In my dreams
-                    Scared of waking up and you'll be gone
-                    Face the truth and now be all alone
-                    Baby, let's get into the groove
-                    Show me all your dirty moves</p>
-                    <p>Come on, come on, come on
-                        Love is all over me
-                        You are the only one
-                        Living in my fantasy
-                        In my dreams
-                        Come on, come on, come on
-                        Love is all over me
-                        You are the only one
-                        Living in my fantasy
-                        In my dreams
-                        In my dreams</p>
-                        <p>If this ain't real don't wake me up
-                            I don't ever wanna stop
-                            Come on, come on, come on
-                            Love is all over me
-                            You are the only one
-                            Living in my fantasy
-                            In my dreams
-                            Come on, come on, come on
-                            Love is all over me
-                            You are the only one
-                            Living in my fantasy
-                            In my dreams
-                            Come on, come on, come on
-                            Love is all over me (whoa)
-                            You are the only one
-                            Living in my fantasy
-                            In my dreams</p>
         </div>
-
-
-        </div>
-
-
-            </div>
-
+        </main>
             <script src="./script.js"></script>
+            <script src="./play.js"></script>
 </body>
 
 </html>
